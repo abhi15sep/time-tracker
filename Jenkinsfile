@@ -7,17 +7,17 @@ pipeline {
    stages {
       stage('Build') {
          steps {
-            sh "mvn clean -f time-tracker"
+            sh "mvn clean"
          }
       }
       stage('Test') {
          steps {
-            sh "mvn test -f time-tracker"
+            sh "mvn test"
          }
       }
       stage('Deploy') {
          steps {
-            sh "mvn package -f time-tracker"
+            sh "mvn package"
          }
       }
    }
